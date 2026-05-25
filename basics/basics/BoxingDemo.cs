@@ -15,9 +15,9 @@ public class BoxingDemo
 
         // Boxing (converting from value types to reference types)
         int i = 10;
-        object o = i; // This is called boxing - where the type was changed from into to System.Object type.
+        object o = i; // This is called boxing - where the type was changed from int type to System.Object type.
         
-        // * UnBoxing (type converstion from onject to value types)
+        // * UnBoxing (type conversion from inject to value types)
         int a = (int)o;
         Console.WriteLine(a.GetType()); // int
         
