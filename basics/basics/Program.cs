@@ -11,6 +11,12 @@ class Program
         // StringBasics();
         TypeCastingBasics();
         MethodsBasics();
+        
+        // * Boxing and Unboxing
+        // BoxingDemo boxingDemo = new BoxingDemo();
+        // boxingDemo.Main();
+        
+        // * OOPS
     }
 
     static void VariableBasics()
@@ -137,6 +143,22 @@ class Program
         x = x * x;
     }
 
+    // * Here the "param" is the key word, similar to args or ...params syntax in JS
+    static int Sum(params int[] numbers)
+    {
+        return numbers.Sum();
+    }
+
+    static void CalculateRectangle(int length, int breadth, out int area, out int perimeter)
+    {
+        // * Here this function need to explicitly assign the value to the "area" and "perimeter" params.
+        // Also the "area" and "perimeter" are not exact params, they are the one which returned from the function itself
+        
+        // If we are not intializing these values, then compiler will through error.
+        area = length * breadth;
+        perimeter = area * 2;
+    }
+
     static void MethodsBasics()
     {
         int? x = 10;
@@ -145,9 +167,16 @@ class Program
         
         // Without using ref, the value will be 10
         // With using ref, the value will be 100
+        // Here the variable X's value was mutated, because we passed them as ref, instead of value.
         Console.WriteLine($"The value of X is = {x}"); 
         
-        
         // * Params - getting spread params in function
+        int result = Sum(1, 2, 3, 4, 5);
+        Console.WriteLine(result);
+
+        // * Here I never initialized the area & perimeter
+        CalculateRectangle(10, 20, out int area, out int perimeter);
+        Console.WriteLine(area);
+        Console.WriteLine(perimeter);
     }
 }
