@@ -100,7 +100,7 @@ A process of extending the methods and properties from the parent class, so that
     - Sealed is the property which can be used in conjustion with both class and its methods,
         - If a class is sealed, then we cannot able to inherit them.
         - If a method is sealed, We cannot override them in child class. For functions alone the Sealed is always used in conjustion with Virtual.
-- Supports only Single and Multilevel. Multiple inheritance was not supported. We can use interface on taht occasion.
+- Supports only Single and Multilevel. Multiple inheritance was not supported. We can use interface on that occasion.
 
 ## Polymorphism (Many forms):
 
@@ -121,12 +121,28 @@ Abstraction is the process of hiding the complex implementation and exposing onl
 - We will be using `override` property to override the abstract methods in the derived class
 - Abstract methods are the `function declartions`, we `should always override` them in child/derived class by `defining the function`.
 
-**Note**: Always use Abstract methods when there need to have a shared `state` or a `base implementation`. It gives the ability of `is-a` relationship.
+**Note**: Always use Abstract methods when there need to have a shared `state` or a `base implementation`. <br>
+
+**It gives the ability of `is-a` relationship**.
 
 ### Interface:
 
+A blueprint or the schema, which defines the strict contract of behaviours. It answers `what exactly the class must do`, without any implementation.
+
+1. Provides the Ability to perform `multiple inheritance`
+2. Always have `I` as the start while defining the name of Interface
+3. All the methods in interface are by default `public` access modifier
+4. Interface should not have any state i.e properties
+5. **Its very powerful and ability to provide the loose coupling (highly used in dependency injection of multiple classes that was implements the interface)**
+
+**It gives the ability of `can-do` relationship**
 
 ## Encapsulation:
+
+A process of hiding or protecting the data from the external modifications. Using varies properties we can hide or protect the data
+
+1. Access Modifiers
+2. Getter and Setter properties
 
 ## Static keyword
 

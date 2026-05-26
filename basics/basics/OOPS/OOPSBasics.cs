@@ -7,6 +7,23 @@ public class OOPSBasics
         InheritanceExample();
         PolymorphismExample();
         AbstractionExample();
+        InterfaceExample();
+        EncapsulationExample();
+    }
+
+    static void EncapsulationExample()
+    {
+        BankAccountEncapsulation acc = new BankAccountEncapsulation(12345678);
+
+        Console.WriteLine($"Balance of the AccounNumber={acc.AccountNumber} is balance={acc.Balance}");
+
+        // * Here i cannot change the balance directly
+        acc.Deposit(1000);
+        acc.Deposit(2000);
+        Console.WriteLine($"Balance of the AccounNumber={acc.AccountNumber} is balance={acc.Balance}");
+        acc.Deposit(1000);
+        acc.Withdraw(3000);
+        Console.WriteLine($"Balance of the AccounNumber={acc.AccountNumber} is balance={acc.Balance}");
     }
 
     static void InheritanceExample()
@@ -17,6 +34,19 @@ public class OOPSBasics
         EmployeeInheritance emp1 = new EmployeeInheritance("Keerthana", 25, "Doctor");
         
         Console.WriteLine(emp1.Describe());
+    }
+
+    static void InterfaceExample()
+    {
+        OrderCheckout order = new OrderCheckout();
+
+        // * Here i can use both Stripe and Paypal processing
+        // Interface gives the can do oppurtunity with 2 different streams
+        Paypal paypal = new Paypal();
+        Stripe stripe = new Stripe();
+
+        order.ProcessPayment(102, paypal);
+        order.ProcessPayment(100, stripe);
     }
 
     static void AbstractionExample()
