@@ -95,3 +95,10 @@ It provides the explicitly on how the data should be accessed by the other objec
 ## Abstraction vs Interface:
 
 ## Encapsulation:
+
+
+## Static keyword
+
+- We cannot access non-static methods from the Static Method
+- We can access Non Static class from Static Method
+- We dont need instance to access the Static Methods

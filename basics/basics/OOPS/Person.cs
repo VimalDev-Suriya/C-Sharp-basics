@@ -18,7 +18,7 @@ public class Person
     {
         _name = name;
         _age = age;
-        Console.WriteLine($"Named Constructor Executed with {name} {age}");
+        Console.WriteLine($"Named Constructor Executed with Name={name} & Age={age}");
     }
 
     // * Control comes to below constructor, when it sees the "this", then the control goes back to the corresponding constructor (i.e) above one
@@ -27,6 +27,16 @@ public class Person
     {
         Console.WriteLine("Constructor Executed with This Keyword");
     }
+
+    // public virtual string Describe()
+    // {
+    //     return $"${_name} {_age}";
+    // }
+
+    // * Lambda Expression for the single return statement
+    // * Virtual keyword, explicity states that this method might be overrided by the Child class
+    // * But its not mandatory for the child class to override them
+    public virtual string Describe() => $"Your Name is {_name} and Age is {_age}";
 }
 
 // public class Person

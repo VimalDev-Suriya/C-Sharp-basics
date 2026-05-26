@@ -10,24 +10,22 @@ class Program
     {
         // VariableBasics();
         // StringBasics();
-        TypeCastingBasics();
-        MethodsBasics();
+        // TypeCastingBasics();
+        // MethodsBasics();
         
         // * Boxing and Unboxing
         // BoxingDemo boxingDemo = new BoxingDemo();
         // boxingDemo.Main();
-        
+
+
         // * OOPS
-        // Person p1 = new Person();
-        // Person p2 = new Person("Suriya");
-        Person p3 = new Person("Suriya", 70);
-        // Person p4 = new Person
-        // {
-        //     Name = "Suriya",
-        //     Age = 20,
-        // };
-        //
-        // Console.WriteLine(p4.Age);
+        // OOPSBasics oops = new OOPSBasics();
+
+        // * Accessing the Non Static Method.
+        // oops.Basics();
+
+        // * Accessing the static methods does not require the new Keyword
+        OOPSBasics.Basics();
     }
 
     static void VariableBasics()
