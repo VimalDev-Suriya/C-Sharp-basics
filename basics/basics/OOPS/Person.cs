@@ -7,6 +7,20 @@ public class Person
 {
     private string _name;
     private int _age;
+    // * I can access the testProtectedProperties in child class, because of protected
+    protected int testProtectedProperties;
+
+    public string Name{
+        get => _name;
+        set => _name = value;
+    }
+
+    // * Here i am using lambda expression
+    public int Age
+    {
+        get => _age;
+        set => _age = value;
+    }
     
     // * It will be executed only during new Person()
     public Person()
@@ -18,6 +32,7 @@ public class Person
     {
         _name = name;
         _age = age;
+        testProtectedProperties = 10;
         Console.WriteLine($"Named Constructor Executed with Name={name} & Age={age}");
     }
 
@@ -37,6 +52,11 @@ public class Person
     // * Virtual keyword, explicity states that this method might be overrided by the Child class
     // * But its not mandatory for the child class to override them
     public virtual string Describe() => $"Your Name is {_name} and Age is {_age}";
+
+    public virtual void SealedMethod()
+    {
+        Console.WriteLine("Sealed Method");
+    }
 }
 
 // public class Person

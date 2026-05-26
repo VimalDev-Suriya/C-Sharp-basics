@@ -89,13 +89,44 @@ It provides the explicitly on how the data should be accessed by the other objec
 
 ## Inheritance:
 
+A process of extending the methods and properties from the parent class, so that we could organize application effectively.
 
-## Polymorphism:
+- We use `:` to extend from the parent class in C#
+- Always pass the required properties to parent class whenever required
+- We use `base` keyword to access the properties and methods from Parent class
+- `sealed`, `virtual` and `override` are 2 properties for Method Overriding concept in C#. 
+    - Virtual is used in parent class, which states that the corresponding method might be overided
+    - Override is used in child class which actually override the method
+    - Sealed is the property which can be used in conjustion with both class and its methods,
+        - If a class is sealed, then we cannot able to inherit them.
+        - If a method is sealed, We cannot override them in child class. For functions alone the Sealed is always used in conjustion with Virtual.
+- Supports only Single and Multilevel. Multiple inheritance was not supported. We can use interface on taht occasion.
+
+## Polymorphism (Many forms):
+
+One of the Key OOPS concept, where it provides the ability to override the implementation of methods. There are 2 types of polymorphism
+
+1. Static (compile time)
+    - Method Overloading - Same method name, but different set of paramaters
+2. Dynamic (runtime)
+    - Method Overriding
 
 ## Abstraction vs Interface:
 
-## Encapsulation:
+### Abstraction:
 
+Abstraction is the process of hiding the complex implementation and exposing only the required fields and methods. It answers what object does, rather than how it does.
+
+- `Abstract methods` can be implemented only within the `abstract class`.
+- We will be using `override` property to override the abstract methods in the derived class
+- Abstract methods are the `function declartions`, we `should always override` them in child/derived class by `defining the function`.
+
+**Note**: Always use Abstract methods when there need to have a shared `state` or a `base implementation`. It gives the ability of `is-a` relationship.
+
+### Interface:
+
+
+## Encapsulation:
 
 ## Static keyword
 
