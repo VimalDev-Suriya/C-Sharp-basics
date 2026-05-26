@@ -24,6 +24,25 @@ public class OOPSBasics
         acc.Deposit(1000);
         acc.Withdraw(3000);
         Console.WriteLine($"Balance of the AccounNumber={acc.AccountNumber} is balance={acc.Balance}");
+        
+        // * Here I cannot able to set the accountnumber 
+        BankAccountEncapsulationV2 acc1 = new BankAccountEncapsulationV2
+        {
+            AccountNumber = 1234556
+        };
+
+        // * I cannot able to set this, because this is init only [property]
+        // acc1.AccountNumber = 123;
+
+        Console.WriteLine($"Balance of the AccounNumber={acc1.AccountNumber} is balance={acc1.Balance}");
+
+        // * Here i cannot change the balance directly
+        acc1.Deposit(1000);
+        acc1.Deposit(2000);
+        Console.WriteLine($"Balance of the AccounNumber={acc1.AccountNumber} is balance={acc1.Balance}");
+        acc1.Deposit(1000);
+        acc1.Withdraw(3000);
+        Console.WriteLine($"Balance of the AccounNumber={acc1.AccountNumber} is balance={acc1.Balance}");
     }
 
     static void InheritanceExample()

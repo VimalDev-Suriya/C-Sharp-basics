@@ -34,3 +34,27 @@ public class BankAccountEncapsulation
         Console.WriteLine("Successfully Withdrawed");
     }
 }
+
+public class BankAccountEncapsulationV2
+{
+    private decimal _balance = 0;
+
+    public decimal Balance {get => _balance;}
+    public long AccountNumber
+    {
+        get;
+        init; // Init explicitly stats that this value can be set only during the time of initialization
+    }
+
+    public void Deposit(decimal amount)
+    {
+        _balance += amount;
+        Console.WriteLine("Successfully Deposited");
+    }
+
+    public void Withdraw(decimal amount)
+    {
+        _balance -= amount;
+        Console.WriteLine("Successfully Withdrawed");
+    }
+}

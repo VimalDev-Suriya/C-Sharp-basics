@@ -26,6 +26,10 @@ class Program
 
         // * Accessing the static methods does not require the new Keyword
         OOPSBasics.Basics();
+
+        // * Collections
+        CollectionsBasics collectionsBasics = new CollectionsBasics();
+        collectionsBasics.Basics();
     }
 
     static void VariableBasics()
