@@ -12,3 +12,7 @@ Lists are the Dynamic Sized collection which can hold dynamic typed values. Uses
     - ArrayList can accept any type of data, but we should do `boxing` and `unboxing` to perform certain actions which are high performance impact actions
 - They can `accept Duplicates`
 - Ordered
+
+## Dictionery:
+
+A Key-Value pair data collection.
