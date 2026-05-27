@@ -9,5 +9,8 @@ public class CollectionsBasics
 
         DictioneryBasics dictioneryBasics = new();
         dictioneryBasics.Basics();
+
+        HashsetBasics hashsetBasics = new();
+        hashsetBasics.Basics();
     }
 } 

@@ -5,12 +5,22 @@ public class ListBasics
         // * List are Ordered, indexed-based, allows-duplicates
 
         // * Can be initialzed like this by having some default values
+        // This is Object initializer syntax
         // var names = new List<string> {"suriya", "devaraj", "vimala", "keethana"};
 
         // Based on the return type , we can use "new()" directly into the String
         // List<string> names = new() {"a"};
 
-        // * Simplest way to initialize the List in latest C#
+        // * This will create the empty list with 10 size.
+        // List<string> test = new List<string>(10);
+
+        // * Initializing the List with 10 size and 2 values in it.
+        // List<string> test_1 = new List<string>(10)
+        // {
+        //     "a", "b"
+        // };
+
+        // * Simplest way to initialize the List in latest C# version
         List<string> names = ["a", "b", "d", "e", "f"];
 
         Console.WriteLine(names[0]);

@@ -29,10 +29,10 @@ class Program
 
         // * Collections
         CollectionsBasics collectionsBasics = new CollectionsBasics();
-        // collectionsBasics.Basics();
+        collectionsBasics.Basics();
 
         GenericBasics genericBasics = new();
-        genericBasics.Basics();
+        // genericBasics.Basics();
     }
 
     static void VariableBasics()
