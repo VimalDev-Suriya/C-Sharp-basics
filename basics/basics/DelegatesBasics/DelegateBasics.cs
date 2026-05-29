@@ -16,6 +16,9 @@ public static class DelegateBasics
         MuticastDelegateExample();
         BuiltInDelegateExample();
         EventsBasics.Basics();
+
+        var aggrecate = new AggregateBasics();
+        aggrecate.Basics();
     }
 
     public static void CustomeDelegateExample()

@@ -8,7 +8,7 @@ namespace basics;
 
 class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
         // VariableBasics();
         // StringBasics();
@@ -31,19 +31,30 @@ class Program
 
         // * Collections
         CollectionsBasics collectionsBasics = new CollectionsBasics();
-        collectionsBasics.Basics();
+        // collectionsBasics.Basics();
 
         GenericBasics genericBasics = new();
         // genericBasics.Basics();
         
-        DelegateBasics.Basics();
+        // DelegateBasics.Basics();
         
         ExtensionsBasics.ExtensionsBasics.Basics();
 
-        LINQBasics.LINQBasics.Basics();
+        // LINQBasics.LINQBasics.Basics();
         
         var basics = new YieldBasics.YieldBasics();
-        basics.Basics();
+        // basics.Basics();
+
+        Console.WriteLine("ASYNC STARTS (PROGRAM FILE)");
+        var asyncBasics = new AsyncAwaitBasics.AsyncAwaitBasics();
+
+        // C# is the Multi threaded Language.
+        await asyncBasics.Basics();
+        // * Uncomment the below line and see the output in terminal
+        // asyncBasics.Basics();
+        Console.WriteLine("ASYNC AFTER CALL (PROGRAM FILE)");
+
+        // Console.ReadLine();
     }
 
     static void VariableBasics()

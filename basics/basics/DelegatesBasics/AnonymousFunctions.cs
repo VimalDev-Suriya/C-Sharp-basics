@@ -25,5 +25,5 @@ public class AnonymousFunctions
         
         // * We can use Lambda expressions for more cleaner way
         Func<int, int, int> Sub = (int a, int b) => a - b;
-    } 
+    }
 }
