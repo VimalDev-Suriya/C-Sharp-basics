@@ -1,5 +1,7 @@
 ﻿// * To import additional packages, we use "using"
 using System.Text;
+using basics.Delegates;
+using basics.ExtensionsBasics;
 using basics.OOPS;
 
 namespace basics;
@@ -33,6 +35,15 @@ class Program
 
         GenericBasics genericBasics = new();
         // genericBasics.Basics();
+        
+        DelegateBasics.Basics();
+        
+        ExtensionsBasics.ExtensionsBasics.Basics();
+
+        LINQBasics.LINQBasics.Basics();
+        
+        var basics = new YieldBasics.YieldBasics();
+        basics.Basics();
     }
 
     static void VariableBasics()
